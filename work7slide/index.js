@@ -9,6 +9,6 @@ function sort(method){
     }
     showDiv = document.getElementById('Anim')
     logValues = logs.values()
-    consol.log(logValues.next())
-    setTimeout("showlog(logValues,showDiv)",50)
+    console.log(logValues.next())
+    setTimeout("showLog(logValues,showDiv)",50)
 }
