@@ -1,3 +1,4 @@
+
 let collegeSelectArr = ['电子与通信学院', '先进制造学院', '电气技术学院', '汽车学院', '计算机与设计学院', '外语商务学院', '经济贸易学院', '物流学院', '马克思主义学院']
 let majorSelectArr = [
     ['电子', '电信', '通信', '嵌入', '物联'],
@@ -85,19 +86,17 @@ var majorSelect = document.getElementById('majorSelect');
 collegeSelect.onchange = function() {
     majorSelect.options.length = 0;
     createOption(majorSelect,majorSelectArr[collegeSelect.value]);
-};
+    if (collegeSelect.value >= 0){
+        majorSelect.onchange();
+    }else{
+        classesSelect.options.length = 0;
+    }
+    };
+
 var classesSelect = document.getElementById('classesSelect');
 majorSelect.onchange = function(){
 majorSelect.options.length = 0;
-createOption(classesSelect,classesSelectArr[collegeSelect.value]);
+createOption(classesSelect,classesSelectArr[collegeSelect.value][majorSelect.value]);
 };
-collegeSelect.onchange = function(){
-    majorSelect.options.length = 0;
-    createOption(majorSelect,majorSelectArr[collegeSelect.value]);
-if (collegeSelect.value >= 0){
-    majorSelect.onchange();
-}else{
-    classesSelect.options.length = 0;
-}
-};
+
 
