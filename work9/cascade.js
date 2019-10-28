@@ -10,7 +10,7 @@ let majorSelectArr = [
     ['物流', '物技', '工企', '营销', '报关', '连锁'],
     ['社工']
 ]
-let classSelectArr = [
+let classesSelectArr = [
     [
         ["电子1801", "电子1802"],
         ["电信1803", "电信1804"],
@@ -86,10 +86,10 @@ college.onchange = function() {
     major.options.length = 0;
     createOption(major,majorArr[college.value]);
 };
-var class = document.getElementById(class);
+var classes = document.getElementById(classes);
 major.onchange = function(){
 major.options.length = 0;
-createOption(class,classArr[college.value]);
+createOption(classes,classesArr[college.value]);
 };
 college.onchange = function(){
     major.options.length = 0;
@@ -97,7 +97,7 @@ college.onchange = function(){
 if (college.value >= 0){
     major.onchange();
 }else{
-    classe.options.length = 0;
+    classes.options.length = 0;
 }
 };
 
