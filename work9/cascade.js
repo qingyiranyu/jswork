@@ -79,14 +79,14 @@ function createOption(obj,data){
         obj.options.add(op);
     }
 }
-var collegeSelect = document.getElementById('college');
+var collegeSelect = document.getElementById('collegeSelect');
 createOption(collegeSelect,collegeSelectArr);
-var majorSelect = document.getElementById('major');
+var majorSelect = document.getElementById('majorSelect');
 collegeSelect.onchange = function() {
     majorSelect.options.length = 0;
     createOption(majorSelect,majorSelectArr[collegeSelect.value]);
 };
-var classesSelect = document.getElementById(classesSelect);
+var classesSelect = document.getElementById('classesSelect');
 majorSelect.onchange = function(){
 majorSelect.options.length = 0;
 createOption(classesSelect,classesSelectArr[collegeSelect.value]);
