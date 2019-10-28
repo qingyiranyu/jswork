@@ -79,25 +79,25 @@ function createOption(obj,data){
         obj.options.add(op);
     }
 }
-var college = document.getElementById('college');
-createOption(college,collegeArr);
-var major = document.getElementById('major');
-college.onchange = function() {
-    major.options.length = 0;
-    createOption(major,majorArr[college.value]);
+var collegeSelect = document.getElementById('college');
+createOption(collegeSelect,collegeSelectArr);
+var majorSelect = document.getElementById('major');
+collegeSelect.onchange = function() {
+    majorSelect.options.length = 0;
+    createOption(majorSelect,majorSelectArr[collegeSelect.value]);
 };
-var classes = document.getElementById(classes);
-major.onchange = function(){
-major.options.length = 0;
-createOption(classes,classesArr[college.value]);
+var classesSelect = document.getElementById(classesSelect);
+majorSelect.onchange = function(){
+majorSelect.options.length = 0;
+createOption(classesSelect,classesSelectArr[collegeSelect.value]);
 };
-college.onchange = function(){
-    major.options.length = 0;
-    createOption(major,majorArr[college.value]);
-if (college.value >= 0){
-    major.onchange();
+collegeSelect.onchange = function(){
+    majorSelect.options.length = 0;
+    createOption(majorSelect,majorSelectArr[collegeSelect.value]);
+if (collegeSelect.value >= 0){
+    majorSelect.onchange();
 }else{
-    classes.options.length = 0;
+    classesSelect.options.length = 0;
 }
 };
 
