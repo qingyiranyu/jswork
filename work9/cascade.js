@@ -82,6 +82,7 @@ function createOption(obj,data){
 }
 var collegeSelect = document.getElementById('collegeSelect');
 createOption(collegeSelect,collegeSelectArr);
+
 var majorSelect = document.getElementById('majorSelect');
 collegeSelect.onchange = function() {
     majorSelect.options.length = 0;
@@ -95,7 +96,7 @@ collegeSelect.onchange = function() {
 
 var classesSelect = document.getElementById('classesSelect');
 majorSelect.onchange = function(){
-majorSelect.options.length = 0;
+classSelect.options.length = 0;
 createOption(classesSelect,classesSelectArr[collegeSelect.value][majorSelect.value]);
 };
 
