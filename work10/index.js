@@ -1,3 +1,4 @@
+
 function monkey(){
     let total = document.getElementById("monkeytotal").value
     let kick = document.getElementById("monkeykick").value
@@ -24,10 +25,10 @@ function monkey(){
 function stat(){
     let str = document.getElementById("str").value
     let obj = {}
-    var zfc ="qaeweezserasrweewa"
-
-    
-    
-    document.write(zfc.split(""))
-
-}
+    var array = str.split("")
+    array = array.sort()
+    for(var i = 0, len = str.length; i<len; i++ ){
+            obj[array[i]] = (obj[array[i]] + 1) || 1;
+        }
+        document.getElementById('result').innerText = JSON.stringify(obj)
+    }
