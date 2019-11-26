@@ -17,14 +17,14 @@
       "id": "66e6dd48-d4c9-4762-8013-0ef80cecfefc",
       "comment": "",
       "command": "setWindowSize",
-      "target": "500x500",
+      "target": "600x600",
       "targets": [],
       "value": ""
     }, {
       "id": "53d9c689-8db4-4868-9bd3-8498494cb485",
       "comment": "",
       "command": "click",
-      "target": "linkText=work13 表单生成器",
+      "target": "xpath=//a[contains(text(),'work13')]",
       "targets": [
         ["linkText=work13 表单生成器", "linkText"],
         ["css=a:nth-child(30)", "css:finder"],
@@ -157,14 +157,14 @@
       "id": "c29e8593-2879-4348-af78-9818a4071e2b",
       "comment": "",
       "command": "setWindowSize",
-      "target": "500x500",
+      "target": "600x600",
       "targets": [],
       "value": ""
     }, {
       "id": "0ad60f80-8fec-4dac-91c3-7814dac6f138",
       "comment": "",
       "command": "click",
-      "target": "linkText=work13 表单生成器",
+      "target": "xpath=//a[contains(text(),'work13')]",
       "targets": [
         ["linkText=work13 表单生成器", "linkText"],
         ["css=a:nth-child(30)", "css:finder"],
