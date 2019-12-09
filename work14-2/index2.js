@@ -12,7 +12,6 @@ function seckill() {
         m--;
     } 
 
-
     if(m == -1){
         m = 59;
     } 
