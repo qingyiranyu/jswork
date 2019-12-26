@@ -12,7 +12,7 @@ $('smallBox').onmouserout=function(){
     $('mask').style.display='none';
     $('bigBox').style.display='none';
 };
-
+  
 
 $('smallBox').onmousemove=function(event){
     var event=event||window.event;
